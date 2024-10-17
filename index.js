@@ -20,14 +20,14 @@ let orderArray2 = orderArray1.map(flavor => flavor.trim());   //Use map and trim
 console.log(orderArray2);   //Testing output 
 
 
-let flavorCount = {};                                             //Create an empty object for starting a loop and for storing the count of flavors
+let orderCounted = {};                                             //Create an empty object for starting a loop and for storing the count of flavors
 
 orderArray2.forEach(flavor => {                                          // Loop through the array and count the occurrences of each flavor
-    if (flavorCount[flavor]) {                                          // Check if the flavor already exists in the object
-        flavorCount[flavor]++;                                          // If it exists, add 1 to the count
+    if (orderCounted[flavor]) {                                          // Check if the flavor already exists in the object
+        orderCounted[flavor]++;                                          // If it exists, add 1 to the count
     } else {
-        flavorCount[flavor] = 1;                                        // If it doesn't exist, set count to 1
+        orderCounted[flavor] = 1;                                        // If it doesn't exist, set count to 1
     }
 });
 
-console.log("Flavor count: ", flavorCount);   
+console.log("Order: ", orderCounted);   
